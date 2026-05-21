@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import { certificationsData } from "../data/certifications";
 ---
 
 <BaseLayout title="CV | Victoria Vallejos" sideBarActiveItemID="cv">
@@ -57,15 +58,20 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certificaciones y Formación Complementaria</div>
+    <div class="text-3xl w-full font-bold">Certificaciones Destacadas</div>
   </div>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li><strong>Agile Explorer</strong> – IBM</li>
-    <li><strong>Gestión Efectiva de Proyectos y Equipos</strong> – Open Academy Santander</li>
-    <li><strong>Liderazgo en el Entorno Digital</strong> – Open Academy Santander</li>
-    <li><strong>Boost Sales Team CRM Efficiency</strong> – Salesforce Trailhead</li>
-  </ul>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    {certificationsData.map((cert) => (
+      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col items-center text-center justify-between">
+        <img src={cert.image} alt={cert.title} class="w-16 h-16 object-contain mb-3 rounded" />
+        <div>
+          <h4 class="font-bold text-sm leading-tight mb-1">{cert.title}</h4>
+          <p class="text-xs text-neutral-content">{cert.institution}</p>
+        </div>
+      </div>
+    ))}
+  </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Habilidades Técnicas</div>
