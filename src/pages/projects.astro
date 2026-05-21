@@ -1,47 +1,52 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import { projectsData } from "../data/projects";
+
+// Filtramos de forma automatizada por la categoría declarada en el archivo central
+const datavolveProjects = projectsData.filter(p => p.category === "Datavolve B2B");
+const personalProjects = projectsData.filter(p => p.category === "Desarrollo Personal y Academia");
 ---
 
 <BaseLayout title="Proyectos | Victoria Vallejos" sideBarActiveItemID="projects">
   <div>
     <div class="text-3xl w-full font-bold mb-5">Proyectos y Consultoría</div>
     <p class="text-sm text-neutral-content mb-8">
-      Espacio dedicado al desarrollo de soluciones tecnológicas, gestión estratégica y proyectos independientes.
+      Registro y evolución de soluciones tecnológicas, ingeniería de datos e iniciativas de automatización activa.
     </p>
   </div>
 
-  <div class="mb-5">
-    <div class="text-2xl w-full font-bold mb-4">Iniciativas Empresariales</div>
+  <div class="mb-5 mt-6">
+    <div class="text-2xl w-full font-bold text-primary mb-2">📊 Soluciones Corporativas & Ecosistema Datavolve</div>
+    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
   </div>
 
-  <HorizontalCard
-    title="Datavolve • Consultoría TI"
-    img="https://placehold.co/600x400/1e3a8a/ffffff?text=Datavolve+Consulting"
-    desc="Proyecto de consultoría estratégica y tecnológica enfocado en la transformación digital, optimización de procesos y analítica de datos para organizaciones. Diseño de propuestas de valor que integran infraestructura tecnológica moderna con objetivos de negocio."
-    url="#"
-    badge="PROYECTO ACTIVO"
-  />
-
-  <div class="divider my-6"></div>
-
-  <div class="mb-5">
-    <div class="text-2xl w-full font-bold mb-4">Desarrollo Técnico y Academia</div>
+  <div class="grid gap-4">
+    {datavolveProjects.map((project) => (
+      <HorizontalCard
+        title={project.title}
+        img={project.image}
+        desc={project.description}
+        url={project.url}
+        badge={project.badge}
+      />
+    ))}
   </div>
 
-  <HorizontalCard
-    title="Portafolio Profesional Web"
-    img="https://placehold.co/600x400/0f172a/ffffff?text=Astro+Portfolio"
-    desc="Diseño e implementación de este sitio web utilizando Astro, Tailwind CSS y TypeScript. Arquitectura desacoplada basada en el principio DRY para la gestión centralizada de certificaciones y optimización de rendimiento SEO."
-    url="https://github.com/victopvl/victopvl.github.io"
-    badge="COMPLETADO"
-  />
+  <div class="mb-5 mt-12">
+    <div class="text-2xl w-full font-bold text-primary mb-2">💻 Ingeniería Aplicada & Desarrollo Personal</div>
+    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+  </div>
 
-  <HorizontalCard
-    title="Próximo Proyecto de Ingeniería"
-    img="https://placehold.co/600x400/cccccc/666666?text=Espacio+Reservado"
-    desc="Espacio reservado para los sistemas y aplicaciones de software desarrollados durante el ciclo avanzado de la carrera de Ingeniería Civil Informática."
-    url="#"
-    badge="PRÓXIMAMENTE"
-  />
+  <div class="grid gap-4">
+    {personalProjects.map((project) => (
+      <HorizontalCard
+        title={project.title}
+        img={project.image}
+        desc={project.description}
+        url={project.url}
+        badge={project.badge}
+      />
+    ))}
+  </div>
 </BaseLayout>
