@@ -10,20 +10,43 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v6
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          package-manager: pnpm@8.15.4
-          build-cmd: |
-            pnpm config set supportedArchitectures.cpu "x64" && pnpm approve-builds && pnpm run build
+
+      - name: Install PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8.15.4
+          run_install: false
+
+      - name: Configure PNPM Security
+        run: |
+          pnpm config set supportedArchitectures.cpu "x64"
+          pnpm config set dbg:ignore-scripts false
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build Astro Site
+        run: pnpm run build
+
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     needs: build
@@ -34,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
