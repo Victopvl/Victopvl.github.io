@@ -3,28 +3,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
-// Obtenemos los posts ordenados por fecha mas reciente
+// Obtenemos los posts ordenados por fecha más reciente
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Tomamos solo los ultimos 3 para la vista de inicio
+// Tomamos solo los últimos 3 para la vista de inicio
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1 text-base-content/70">Perfil de presentación y portafolio profesional</div>
-    <div class="text-5xl font-bold text-base-content">Victoria Vallejos</div>
-    <div class="text-3xl py-3 font-bold text-blue-700">Trainee TI & Managing Consultant</div>
+    <div class="text-xl py-1 text-base-content/70 font-medium">Perfil de presentación y portafolio profesional</div>
+    <div class="text-5xl font-bold text-base-content tracking-tight">Victoria Vallejos</div>
+    <div class="text-3xl py-3 font-bold text-primary">Trainee TI & Managing Consultant</div>
     <div class="py-2">
       <p class="text-lg text-base-content/80 leading-relaxed">
         Estudiante de Ingeniería Civil Informática en la Universidad Andrés Bello. Me apasiona la convergencia entre el desarrollo tecnológico, la gestión estratégica y el liderazgo de equipos. Actualmente me desempeño como Embajadora en la Comunidad de Inteligencia Artificial Tertulias y Vocera del Club de Emprendedores UNAB. Además, lidero de forma independiente **Datavolve**, un proyecto de consultoría enfocado en transformación digital. Combino mi formación técnica con habilidades de comunicación y metodologías ágiles. ¡Te invito a conocer mi trabajo!
       </p>
     </div>
     <div class="mt-8 flex flex-wrap gap-4">
-      <a class="btn btn-primary bg-blue-700 hover:bg-blue-800 text-white border-none normal-case" href="https://www.linkedin.com" target="_blank">
+      <a class="btn btn-primary text-white normal-case px-6 shadow-sm" href="https://www.linkedin.com" target="_blank">
         Conectemos en LinkedIn
       </a>
-      <a href="mailto:victoriapaz.sa@gmail.com" class="btn btn-outline normal-case">
+      <a href="mailto:victoriapaz.sa@gmail.com" class="btn btn-outline normal-case px-6">
         Iniciar Contacto
       </a>
     </div>
@@ -64,9 +64,11 @@ const last_posts = posts.slice(0, 3);
 
   {
     last_posts.length === 0 ? (
-      <p class="text-sm text-base-content/60 italic">Pronto compartiré las primeras actualizaciones de mi bitácora técnica.</p>
+      <p class="text-sm text-base-content/60 italic bg-base-200/50 p-4 rounded-lg border border-neutral/10">
+        Pronto compartiré las primeras actualizaciones de mi bitácora técnica.
+      </p>
     ) : (
-      last_posts.map((post) => (
+      last_posts.map((post, index) => (
         <>
           <HorizontalCard
             title={post.data.title}
@@ -76,7 +78,7 @@ const last_posts = posts.slice(0, 3);
             target="_self"
             badge={post.data.badge}
           />
-          <div class="divider my-0" />
+          {index < last_posts.length - 1 && <div class="divider my-0" />}
         </>
       ))
     )
