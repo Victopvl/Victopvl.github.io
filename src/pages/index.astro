@@ -2,75 +2,83 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
 
+// Obtenemos los posts ordenados por fecha mas reciente
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+// Tomamos solo los ultimos 3 para la vista de inicio
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Pérfil de presentación y portafolio profesional</div>
-    <div class="text-5xl font-bold">Victoria Vallejos</div>
-    <div class="text-3xl py-3 font-bold">Trainee TI & Managing Consultant</div>
+    <div class="text-xl py-1 text-base-content/70">Perfil de presentación y portafolio profesional</div>
+    <div class="text-5xl font-bold text-base-content">Victoria Vallejos</div>
+    <div class="text-3xl py-3 font-bold text-blue-700">Trainee TI & Managing Consultant</div>
     <div class="py-2">
-      <text class="text-lg">
-        Estudiante de Ingeniería Civil Informática en la Universidad Andrés Bello. Me apasiona la convergencia entre el desarrollo tecnológico, la gestión estratégica y el liderazgo de equipos.  Actualmente me desempeño como Embajadora en la Comunidad de Inteligencia Artificial Tertulias y Vocera del Club de Emprendedores UNAB. Además, lidero de forma independiente Datavolve, un proyecto de consultoría enfocado en transformación digital. Combino mi formación técnica con habilidades de comunicación y metodologías ágiles. ¡Te invito a conocer mi trabajo!
-      </text>
+      <p class="text-lg text-base-content/80 leading-relaxed">
+        Estudiante de Ingeniería Civil Informática en la Universidad Andrés Bello. Me apasiona la convergencia entre el desarrollo tecnológico, la gestión estratégica y el liderazgo de equipos. Actualmente me desempeño como Embajadora en la Comunidad de Inteligencia Artificial Tertulias y Vocera del Club de Emprendedores UNAB. Además, lidero de forma independiente **Datavolve**, un proyecto de consultoría enfocado en transformación digital. Combino mi formación técnica con habilidades de comunicación y metodologías ágiles. ¡Te invito a conocer mi trabajo!
+      </p>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a class="btn btn-primary bg-blue-700 hover:bg-blue-800 text-white border-none normal-case" href="https://www.linkedin.com" target="_blank">
+        Conectemos en LinkedIn
+      </a>
+      <a href="mailto:victoriapaz.sa@gmail.com" class="btn btn-outline normal-case">
+        Iniciar Contacto
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-6 text-base-content">Proyectos Destacados {"</>"}</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Ecosistema Datavolve"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    desc="Plataforma centralizada de consultoría enfocada en transformación digital, analítica de datos avanzada y automatización para el crecimiento organizacional."
+    url="/services"
+    badge="Consultoría"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="Modelos y Automatización con IA"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="Diseño de agentes inteligentes y estructuras base capaces de procesar información compleja y optimizar flujos operativos corporativos."
+    url="/services"
+    badge="Innovación"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
+    title="Repositorios y Plantillas de Código Abierto"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    desc="Desarrollo de estructuras limpias y modulares open-source destinadas a acelerar la arquitectura de software."
+    url="/store"
+    badge="OSS"
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-14 text-base-content">Últimas publicaciones del Feed</div>
   </div>
 
   {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
+    last_posts.length === 0 ? (
+      <p class="text-sm text-base-content/60 italic">Pronto compartiré las primeras actualizaciones de mi bitácora técnica.</p>
+    ) : (
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={`/blog/${post.slug}/`}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    )
   }
 </BaseLayout>
