@@ -3,26 +3,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Currículum | Victoria Vallejos" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold mb-2">Currículum Profesional</div>
-    <p class="text-sm text-base-content/70">
+  <div class="pb-6 mt-5">
+    <h1 class="text-3xl w-full font-bold text-base-content mb-2">Currículum Profesional</h1>
+    <p class="text-base text-base-content/70">
       Perfil ejecutivo, trayectoria académica y experiencia en liderazgo, tecnología y gestión operativa.
     </p>
   </div>
 
-  <div class="mb-10 mt-6">
-    <div class="text-xl font-bold text-base-content mb-2">Perfil</div>
-    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+  <div class="mb-10">
+    <h2 class="text-xl font-bold text-base-content">Perfil</h2>
+    <div class="divider mt-1 mb-4"></div>
     <p class="text-sm text-base-content/80 leading-relaxed text-justify">
       Estudiante universitaria de Ingeniería Civil Informática en la Universidad Andrés Bello, con un marcado interés en la gestión, el liderazgo y la toma de decisiones estratégicas combinadas con el desarrollo tecnológico. Me destaco por mi disciplina, constancia y alta capacidad de organización, habilidades consolidadas en entornos académicos, operativos y de liderazgo estudiantil. Orientada al aprendizaje continuo y a aportar valor en entornos altamente desafiantes.
     </p>
   </div>
 
   <div class="mb-10">
-    <div class="text-xl font-bold text-base-content mb-2">Experiencia de Liderazgo y Tecnología</div>
-    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+    <h2 class="text-xl font-bold text-base-content">Experiencia de Liderazgo y Tecnología</h2>
+    <div class="divider mt-1 mb-6"></div>
 
-    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+    <div class="relative border-l border-neutral/20 pl-6 ml-3 space-y-8">
       <div class="relative">
         <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
         <h3 class="font-bold text-lg text-base-content">Fundadora y Consultora TI</h3>
@@ -53,10 +53,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div class="mb-10">
-    <div class="text-xl font-bold text-base-content mb-2">Experiencia Operativa y de Servicio</div>
-    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+    <h2 class="text-xl font-bold text-base-content">Experiencia Operativa y de Servicio</h2>
+    <div class="divider mt-1 mb-6"></div>
 
-    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+    <div class="relative border-l border-neutral/20 pl-6 ml-3 space-y-8">
       <div class="relative">
         <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
         <h3 class="font-bold text-lg text-base-content">Monitor de Operaciones</h3>
@@ -78,10 +78,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div class="mb-10">
-    <div class="text-xl font-bold text-base-content mb-2">Educación</div>
-    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+    <h2 class="text-xl font-bold text-base-content">Educación</h2>
+    <div class="divider mt-1 mb-6"></div>
 
-    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+    <div class="relative border-l border-neutral/20 pl-6 ml-3 space-y-8">
       <div class="relative">
         <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
         <h3 class="font-bold text-lg text-base-content">Ingeniería Civil Informática</h3>
@@ -97,25 +97,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div class="mb-10">
-    <div class="text-xl font-bold text-base-content mb-2">Certificaciones Globales</div>
-    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+    <h2 class="text-xl font-bold text-base-content">Certificaciones Globales</h2>
+    <div class="divider mt-1 mb-4"></div>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
+      <div class="border border-neutral/10 rounded-xl p-4 bg-base-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-bold text-blue-700 block mb-1">IBM</span>
+          <span class="text-[10px] font-extrabold text-primary tracking-wider uppercase block mb-1">IBM</span>
           <h4 class="font-bold text-sm leading-tight text-base-content">Agile Explorer & Design Thinking Practitioner</h4>
         </div>
       </div>
-      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
+      
+      <div class="border border-neutral/10 rounded-xl p-4 bg-base-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-bold text-blue-700 block mb-1">ORACLE / ONE</span>
+          <span class="text-[10px] font-extrabold text-primary tracking-wider uppercase block mb-1">Oracle / ONE</span>
           <h4 class="font-bold text-sm leading-tight text-base-content">Inmersión en Agentes de Inteligencia Artificial</h4>
         </div>
       </div>
-      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
+      
+      <div class="border border-neutral/10 rounded-xl p-4 bg-base-200 shadow-sm flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-bold text-blue-700 block mb-1">SALESFORCE</span>
+          <span class="text-[10px] font-extrabold text-primary tracking-wider uppercase block mb-1">Salesforce</span>
           <h4 class="font-bold text-sm leading-tight text-base-content">Trailhead Partner Initiatives</h4>
         </div>
       </div>
@@ -124,35 +126,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
     <div>
-      <div class="text-lg font-bold text-base-content mb-2">Habilidades Técnicas</div>
-      <div class="h-0.5 w-full bg-base-300 mb-3"></div>
+      <h2 class="text-lg font-bold text-base-content">Habilidades Técnicas</h2>
+      <div class="divider mt-0.5 mb-3"></div>
       <div class="flex flex-wrap gap-2">
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Gestión de Proyectos</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Metodologías Ágiles</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Transformación Digital</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Análisis de Tecnologías</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Microsoft Office 365</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Google Workspace</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Gestión de Proyectos</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Metodologías Ágiles</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Transformación Digital</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Análisis de Tecnologías</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Microsoft Office 365</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Google Workspace</span>
       </div>
     </div>
 
     <div>
-      <div class="text-lg font-bold text-base-content mb-2">Habilidades Blandas</div>
-      <div class="h-0.5 w-full bg-base-300 mb-3"></div>
+      <h2 class="text-lg font-bold text-base-content">Habilidades Blandas</h2>
+      <div class="divider mt-0.5 mb-3"></div>
       <div class="flex flex-wrap gap-2">
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Comunicación Asertiva</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Liderazgo de Equipos</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Resolución de Conflictos</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Tolerancia a la Presión</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Adaptabilidad y Aprendizaje</span>
-        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Organización Estructurada</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Comunicación Asertiva</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Liderazgo de Equipos</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Resolución de Conflictos</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Tolerancia a la Presión</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Adaptabilidad y Aprendizaje</span>
+        <span class="bg-base-200 border border-neutral/5 text-base-content text-xs px-3 py-1 rounded-md font-medium">Organización Estructurada</span>
       </div>
     </div>
   </div>
 
   <div class="mb-5">
-    <div class="text-xl font-bold text-base-content mb-2">Idiomas</div>
-    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+    <h2 class="text-xl font-bold text-base-content">Idiomas</h2>
+    <div class="divider mt-1 mb-4"></div>
     <div class="grid grid-cols-3 gap-4 text-center md:text-left">
       <div>
         <span class="font-bold text-sm text-base-content block">Español</span>
