@@ -5,10 +5,10 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  class="rounded-lg bg-base-200 hover:shadow-md transition ease-in-out hover:scale-[101%] border border-neutral/10"
 >
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
+  <a href={url} target={target} class="block w-full">
+    <div class="hero-content flex-col md:flex-row p-4 gap-4">
       {
         img && (
           <Image
@@ -17,26 +17,26 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             height={422}
             format="webp"
             alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
+            class="max-w-full md:max-w-[13rem] rounded-lg object-cover"
           />
         )
       }
       <div class="grow w-full">
-        <h1 class="text-xl font-bold">
+        <h2 class="text-xl font-bold text-base-content flex items-center flex-wrap gap-2">
           {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
-        </h1>
-        <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
-          {
-            tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
-                </a>
-              ))
-          }
-        </div>
+          {badge && <span class="badge badge-secondary text-xs">{badge}</span>}
+        </h2>
+        <p class="py-2 text-sm text-base-content/80 font-normal leading-relaxed">{desc}</p>
+        
+        {tags && (
+          <div class="card-actions justify-end mt-2 flex-wrap gap-1">
+            {tags.map((tag) => (
+              <a href={`${tag_url}/${tag}`} class="badge badge-outline text-xs hover:bg-primary hover:text-white transition-colors duration-200">
+                {tag}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   </a>
