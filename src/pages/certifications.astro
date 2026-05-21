@@ -6,7 +6,7 @@ import { certificationsData } from "../data/certifications";
 <BaseLayout title="Certificaciones | Victoria Vallejos" sideBarActiveItemID="certifications">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certificaciones y Formación Adicional</div>
-    <p class="text-sm text-neutral-content mt-2">Un registro interactivo de mis competencias validadas, microcursos y webinars.</p>
+    <p class="text-sm text-base-content/70 mt-2">Un registro interactivo de mis competencias validadas, microcursos y webinars.</p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -21,11 +21,11 @@ import { certificationsData } from "../data/certifications";
                 {cert.category}
               </span>
               <h3 class="font-bold text-lg leading-tight text-base-content">{cert.title}</h3>
-              <p class="text-sm text-neutral-content">{cert.institution} • <span class="text-xs">{cert.date}</span></p>
+              <p class="text-sm text-base-content/70">{cert.institution} • <span class="text-xs">{cert.date}</span></p>
             </div>
           </div>
 
-          <div class="bg-slate-50 border-l-4 border-blue-500 p-3 rounded-r text-sm text-neutral-content italic mb-4">
+          <div class="bg-slate-50 border-l-4 border-blue-500 p-3 rounded-r text-sm text-base-content/80 italic mb-4">
             "{cert.comment}"
           </div>
 
