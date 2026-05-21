@@ -1,126 +1,171 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
-import { certificationsData } from "../data/certifications";
 ---
 
-<BaseLayout title="CV | Victoria Vallejos" sideBarActiveItemID="cv">
+<BaseLayout title="Currículum | Victoria Vallejos" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Perfil Profesional</div>
+    <div class="text-3xl w-full font-bold mb-2">Currículum Profesional</div>
+    <p class="text-sm text-neutral-content">
+      Perfil ejecutivo, trayectoria académica y experiencia en liderazgo, tecnología y gestión operativa.
+    </p>
   </div>
 
-  <div class="mb-10 text-justify">
-    Estudiante universitaria de Ingeniería Civil Informática en la Universidad Andrés Bello, con un marcado interés en la gestión, el liderazgo y la toma de decisiones estratégicas combinadas con el desarrollo tecnológico. Me destaco por mi disciplina, constancia y alta capacidad de organización, habilidades consolidadas en entornos académicos, operativos y de liderazgo estudiantil. Orientada al aprendizaje continuo y a aportar valor en entornos altamente desafiantes.
+  <div class="mb-10 mt-6">
+    <div class="text-xl font-bold text-base-content mb-2">Perfil</div>
+    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+    <p class="text-sm text-neutral-content leading-relaxed text-justify">
+      Estudiante universitaria de Ingeniería Civil Informática en la Universidad Andrés Bello, con un marcado interés en la gestión, el liderazgo y la toma de decisiones estratégicas combinadas con el desarrollo tecnológico. Me destaco por mi disciplina, constancia y alta capacidad de organización, habilidades consolidadas en entornos académicos, operativos y de liderazgo estudiantil. Orientada al aprendizaje continuo y a aportar valor en entornos altamente desafiantes.
+    </p>
   </div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experiencia de Liderazgo y Tecnología</div>
+  <div class="mb-10">
+    <div class="text-xl font-bold text-base-content mb-2">Experiencia de Liderazgo y Tecnología</div>
+    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+
+    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Fundadora y Consultora TI</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Datavolve • 2026 - Presente • Santiago, Chile</div>
+        <p class="text-xs text-neutral-content leading-relaxed">
+          Creación y dirección de un proyecto de consultoría independiente enfocado en la transformación digital y la toma de decisiones basada en datos. Diseño de propuestas de valor estratégicas que integran gestión y soluciones tecnológicas modernas.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Embajadora de la Comunidad de Inteligencia Artificial</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Comunidad Tertulias • 2026 • Santiago, Chile</div>
+        <p class="text-xs text-neutral-content leading-relaxed">
+          Líder encargada de la difusión de la comunidad en plataformas digitales y eventos presenciales masivos orientados a público universitario y profesional. Construcción activa de redes de contacto estratégicas dentro del ecosistema tecnológico.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Vocera Estudiantil / Líder de Marketing</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Club de Emprendedores Universidad Andrés Bello • 2026 • Santiago, Chile</div>
+        <p class="text-xs text-neutral-content leading-relaxed">
+          Representación oficial y comunicación del club ante la comunidad universitaria y entidades externas. Planificación y coordinación de contenido estratégico para potenciar la difusión en canales digitales.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Fundadora"
-      subtitle="2026 en Datavolve (Consultoría TI), Santiago, Chile"
-    >
-      Creación y dirección de un proyecto de consultoría independiente enfocado en la transformación digital y la toma de decisiones basada en datos. Diseño de propuestas de valor estratégicas que integran gestión y soluciones tecnológicas modernas.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Embajadora de la Comunidad de Inteligencia Artificial"
-      subtitle="2026 en Comunidad Tertulias, Santiago, Chile"
-    >
-      Líder encargada de la difusión de la comunidad en plataformas digitales y eventos presenciales masivos orientados a público universitario y profesional. Construcción activa de redes de contacto estratégicas dentro del ecosistema tecnológico.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Vocera Estudiantil / Líder de Marketing"
-      subtitle="2026 en Club de Emprendedores Universidad Andrés Bello, Santiago, Chile"
-    >
-      Representación oficial y comunicación del club ante la comunidad universitaria y entidades externas. Planificación y coordinación de contenido estratégico para potenciar la difusión en canales digitales.
-    </TimeLineElement>
+  <div class="mb-10">
+    <div class="text-xl font-bold text-base-content mb-2">Experiencia Operativa y de Servicio</div>
+    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+
+    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Monitor de Operaciones</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Turistik Aventura Kids • Febrero de 2026 - Actualidad • Santiago, Chile</div>
+        <p class="text-xs text-neutral-content leading-relaxed">
+          Desempeño multifuncional liderando la logística, orden y gestión de recursos del recinto. Resolución de desafíos en tiempo real como cajera, anfitriona e instructora, garantizando altos estándares de seguridad y empatía con el cliente.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Servicio de Atención al Cliente</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Chuck E. Cheese • Enero de 2025 - Septiembre de 2025 • Santiago, Chile</div>
+        <p class="text-xs text-neutral-content leading-relaxed">
+          Gestión operativa en sala, manejo de cajas y coordinación de eventos bajo alta demanda. Dirección y apoyo al equipo de anfitriones, asegurando la resolución efectiva de incidencias críticas mediante comunicación asertiva.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experiencia Operativa y de Servicio</div>
+  <div class="mb-10">
+    <div class="text-xl font-bold text-base-content mb-2">Educación</div>
+    <div class="h-0.5 w-full bg-base-300 mb-6"></div>
+
+    <div class="relative border-l border-base-300 pl-6 ml-3 space-y-8">
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Ingeniería Civil Informática</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Universidad Andrés Bello • 2025 - Actualidad (En curso) • Santiago, Chile</div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 bg-primary h-3 w-3 rounded-full border-2 border-base-100"></div>
+        <h3 class="font-bold text-lg text-base-content">Educación Media</h3>
+        <div class="text-xs text-neutral-content font-medium mb-2">Colegio Alcántara de la Cordillera • 2011 - 2024 • Santiago, Chile</div>
+      </div>
+    </div>
   </div>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Monitor de Operaciones"
-      subtitle="Febrero de 2026 a la actualidad en Turistik Aventura Kids, Santiago, Chile"
-    >
-      Desempeño multifuncional liderando la logística, orden y gestión de recursos del recinto. Resolución de desafíos en tiempo real como cajera, anfitriona e instructora, garantizando altos estándares de seguridad y empatía con el cliente.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Servicio de Atención al Cliente"
-      subtitle="Enero de 2025 a Septiembre de 2025 en Chuck E. Cheese, Santiago, Chile"
-    >
-      Gestión operativa en sala, manejo de cajas y coordinación de eventos bajo alta demanda. Dirección y apoyo al equipo de anfitriones, asegurando la resolución efectiva de incidencias críticas mediante comunicación asertiva.
-    </TimeLineElement>
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certificaciones Destacadas</div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-    {certificationsData.map((cert) => (
-      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col items-center text-center justify-between">
-        <img src={cert.image} alt={cert.title} class="w-16 h-16 object-contain mb-3 rounded" />
+  <div class="mb-10">
+    <div class="text-xl font-bold text-base-content mb-2">Certificaciones Globales</div>
+    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
         <div>
-          <h4 class="font-bold text-sm leading-tight mb-1">{cert.title}</h4>
-          <p class="text-xs text-neutral-content">{cert.institution}</p>
+          <span class="text-[10px] font-bold text-blue-700 block mb-1">IBM</span>
+          <h4 class="font-bold text-sm leading-tight text-base-content">Agile Explorer & Design Thinking Practitioner</h4>
         </div>
       </div>
-    ))}
+      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-bold text-blue-700 block mb-1">ORACLE / ONE</span>
+          <h4 class="font-bold text-sm leading-tight text-base-content">Inmersión en Agentes de Inteligencia Artificial</h4>
+        </div>
+      </div>
+      <div class="border border-base-300 rounded-lg p-4 bg-base-100 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-bold text-blue-700 block mb-1">SALESFORCE</span>
+          <h4 class="font-bold text-sm leading-tight text-base-content">Trailhead Partner Initiatives</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <div>
+      <div class="text-lg font-bold text-base-content mb-2">Habilidades Técnicas</div>
+      <div class="h-0.5 w-full bg-base-300 mb-3"></div>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Gestión de Proyectos</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Metodologías Ágiles</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Transformación Digital</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Análisis de Tecnologías</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Microsoft Office 365</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Google Workspace</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-lg font-bold text-base-content mb-2">Habilidades Blandas</div>
+      <div class="h-0.5 w-full bg-base-300 mb-3"></div>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Comunicación Asertiva</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Liderazgo de Equipos</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Resolución de Conflictos</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Tolerancia a la Presión</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Adaptabilidad y Aprendizaje</span>
+        <span class="bg-base-200 text-base-content text-xs px-3 py-1 rounded-md font-medium">Organización Estructurada</span>
+      </div>
+    </div>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Habilidades Técnicas</div>
-  </div>
-
-  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
-    <li>Gestión de Proyectos</li>
-    <li>Metodologías Ágiles</li>
-    <li>Transformación Digital</li>
-    <li>Análisis de Tecnologías</li>
-    <li>Microsoft Office 365</li>
-    <li>Google Workspace</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Habilidades Blandas</div>
-  </div>
-
-  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
-    <li>Comunicación Asertiva</li>
-    <li>Liderazgo de Equipos</li>
-    <li>Resolución de Conflictos</li>
-    <li>Tolerancia a la Presión</li>
-    <li>Adaptabilidad y Aprendizaje Rápido</li>
-    <li>Organización Estructurada</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Idiomas</div>
-  </div>
-
-  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
-    <li><strong>Español:</strong> Nativo</li>
-    <li><strong>Inglés:</strong> Avanzado (C1)</li>
-    <li><strong>Coreano:</strong> Intermedio</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Educación</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Ingeniería Civil Informática"
-      subtitle="2025 a la actualidad (En curso) en Universidad Andrés Bello, Santiago, Chile"
-    />
-    <TimeLineElement
-      title="Educación Media"
-      subtitle="2011 a 2024 en Colegio Alcántara de la Cordillera, Santiago, Chile"
-    />
+    <div class="text-xl font-bold text-base-content mb-2">Idiomas</div>
+    <div class="h-0.5 w-full bg-base-300 mb-4"></div>
+    <div class="grid grid-cols-3 gap-4 text-center md:text-left">
+      <div>
+        <span class="font-bold text-sm text-base-content block">Español</span>
+        <span class="text-xs text-neutral-content">Nativo</span>
+      </div>
+      <div>
+        <span class="font-bold text-sm text-base-content block">Inglés</span>
+        <span class="text-xs text-neutral-content">Avanzado (C1)</span>
+      </div>
+      <div>
+        <span class="font-bold text-sm text-base-content block">Coreano</span>
+        <span class="text-xs text-neutral-content">Intermedio</span>
+      </div>
+    </div>
   </div>
 </BaseLayout>
