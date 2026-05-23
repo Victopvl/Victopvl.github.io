@@ -1,10 +1,31 @@
-<div class="mt-6 justify-center flex">
-  <a 
-    href="https://taplink.cc/datavolve"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn btn-primary btn-wide text-lg"
-  >
-    📅 Agendar una Consultoría
-  </a>
-</div>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Contacto | Datavolve" sideBarActiveItemID="contacto">
+  <div class="mt-5">
+    <div class="text-3xl w-full font-bold mb-5">¡Hablemos!</div>
+  </div>
+
+  <div class="mb-10 text-lg text-base-content/80">
+    <p>
+      Si buscas transformar tu negocio con soluciones de TI, automatización o consultoría estratégica, estás en el lugar correcto. 
+      Agenda una sesión directamente para revisar tu caso de forma personalizada.
+    </p>
+  </div>
+
+  <div class="mt-8 justify-center flex flex-col items-center bg-base-200 p-8 rounded-xl border border-base-300">
+    <h3 class="text-xl font-semibold mb-4 text-center">Consultoría y Agendamiento</h3>
+    <p class="text-sm text-center mb-6 max-w-md">
+      Utilizo Taplink para centralizar mis canales de atención y agenda de reuniones. Haz clic abajo para coordinar.
+    </p>
+    <a 
+      href="https://taplink.cc/datavolve"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-primary btn-wide text-lg shadow-lg"
+    >
+      📅 Agendar una Consultoría
+    </a>
+  </div>
+</BaseLayout>
